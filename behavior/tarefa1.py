@@ -1,10 +1,10 @@
-def direction (x,y):
+def direction (x,y, refX, refY):
     result =''
-    if y > 0: result+='Cima'
-    elif y<0: result+='Baixo'
+    if y > refY: result+='Cima'
+    elif y<refY: result+='Baixo'
 
-    if x<0: result+= 'Esquerda'
-    elif x > 0: result+='Direita'
+    if x<refX: result+= 'Esquerda'
+    elif x > refX: result+='Direita'
 
     if result =='': result = 'Center'
 
