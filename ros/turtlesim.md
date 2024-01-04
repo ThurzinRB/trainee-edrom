@@ -90,5 +90,17 @@ output:
 
 ![Alt text](./img/Screenshot%20from%202024-01-03%2014-45-02.png "rqt start")
 
+## calling services
 
+![Alt text](./img/Screenshot%20from%202024-01-03%2022-53-28.png)
 
+## Remapping
+
+Command:
+```console
+ros2 run turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtle2/cmd_vel
+```
+
+Output
+
+![Alt text](./img/Screenshot%20from%202024-01-03%2022-56-47.png)
