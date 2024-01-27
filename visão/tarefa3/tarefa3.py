@@ -1,21 +1,28 @@
-
-# Python program to explain cv2.imshow() method 
-  
-# importing cv2 
-import cv2
 import numpy as np
-  
-# path 
-path = 'img.jpg'
-  
-# Reading an image in default mode 
-image = cv2.imread(path) 
-  
-lower_red = np.array([0, 0, 200], dtype = "uint8")
-upper_red= np.array([0, 0, 255], dtype = "uint8")
+import cv2
 
-mask = cv2.inRange(image, lower_red, upper_red)
+cap = cv2.VideoCapture(0)
+while True:
+    ret, frame = cap.read()
+    width = int(cap.get(3))
+    height = int(cap.get(4))
 
-detected_output = cv2.bitwise_and(image, image, mask = mask)
-cv2.imshow("red color detection", detected_output)
-cv2.waitKey(0)
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+    lower_blue = np.array([90,130,130])
+    upper_blue = np.array([130,255,255])
+
+    mask = cv2.inRange(hsv, lower_blue, upper_blue)
+
+    # result = cv2.bitwise_and(frame, frame, mask=mask)
+    result = frame.copy()
+    result[mask == 255] = [0, 0, 255]
+
+    cv2.imshow('frame', frame)
+    cv2.imshow('mask', result)
+
+    if cv2.waitKey(1) == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
