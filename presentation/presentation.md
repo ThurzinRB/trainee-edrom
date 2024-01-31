@@ -5,17 +5,42 @@
 - Python
 - ROS
 - Áreas:
-    - Behaviour
-    - Elétrica
-    - Extrutura
-    - Movimento
-    - Visão
+    
 
 ## ROS
 
 - Realizado treinamento 
 - Aprendizado de conceitos e conhecimentos básicos
+    - Nodes
+    - Topics
+    - Messages
+    - Services
+    - Bags
+    - Lançamentos
+    - Catkin
+    - Packages
+    - TF
 - Observações
+
+## Python
+
+- Concatenate
+- List comprehensions
+- Eye and Identity
+- Linear Algebra
+- Time delta
+
+## Áreas
+### Behaviour
+- Tarefa 1: Dado uma coordenada para origem, printar o quadrante
+- Tarefa 2: Máquina de estados
+### Elétrica
+- Tarefa 1:
+### Extrutura
+### Movimento
+### Visão
+
+
 
 
 
